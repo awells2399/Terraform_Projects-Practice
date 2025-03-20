@@ -42,10 +42,10 @@ resource "aws_s3_bucket_website_configuration" "static_website" {
 }
 
 resource "aws_s3_object" "index_html" {
-  bucket = aws_s3_bucket.static_website.id
-  key    = "index.html"
-  source = "build/index.html"
-  etag   = filemd5("build/index.html")
+  bucket  = aws_s3_bucket.static_website.id
+  key     = "index.html"
+  etag    = filemd5("build/index.html")
+  content = "text/html"
 
 }
 
