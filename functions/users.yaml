@@ -1,0 +1,5 @@
+users:
+- name: Aaron
+  group: developer
+- name: Bob
+  group: auditors
